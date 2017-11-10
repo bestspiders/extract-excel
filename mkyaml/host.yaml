@@ -1,0 +1,318 @@
+name: zbx_hosts.*
+content:
+ - task1:
+    sheet: zbx主机性能汇总
+    name: 咪咕视频-h5-4g
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+ - task2:
+    sheet: zbx主机性能汇总
+    name: 咪咕视频-h5-4g
+    source: E
+    deep: 200
+ - task3:
+    sheet: zbx主机性能汇总
+    name: 咪咕视频-h5-4g
+    source: F
+    deep: 200
+ - task4:
+    name: 咪咕视频
+    calculate: "str(a_d['task1'])+'%/'+str(a_d['task2'])+'%/'+str(a_d['task3'])+'%'" #计算值
+    nameposition: A1
+    dataposition: C1
+ - task5:
+    sheet: zbx主机性能汇总
+    name: 咪咕影院
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+ - task6:
+    sheet: zbx主机性能汇总
+    name: 咪咕影院
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+ - task7:
+    sheet: zbx主机性能汇总
+    name: 咪咕影院
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+ - task8:
+    name: 咪咕影院
+    calculate: "str(a_d['task5'])+'%/'+str(a_d['task6'])+'%/'+str(a_d['task7'])+'%'" #计算值
+    nameposition: A2
+    dataposition: C2
+ - task9:
+    sheet: zbx主机性能汇总
+    name: 咪咕直播
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+ - task10:
+    sheet: zbx主机性能汇总
+    name: 咪咕直播
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+ - task11:
+    sheet: zbx主机性能汇总
+    name: 咪咕直播
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+ - task12:
+    name: 咪咕直播
+    calculate: "str(a_d['task9'])+'%/'+str(a_d['task10'])+'%/'+str(a_d['task11'])+'%'" #计算值
+    nameposition: A3
+    dataposition: C3
+ - task13:
+    sheet: zbx主机性能汇总
+    name: OTT-CDN-Cache-直播
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+ - task14:
+    sheet: zbx主机性能汇总
+    name: OTT-CDN-Cache-直播
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task15:
+    sheet: zbx主机性能汇总
+    name: OTT-CDN-Cache-直播
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task16:
+    sheet: zbx主机性能汇总
+    name: OTT-CDN-Cache-点播
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task17:
+    sheet: zbx主机性能汇总
+    name: OTT-CDN-Cache-点播
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task18:
+    sheet: zbx主机性能汇总
+    name: OTT-CDN-Cache-点播
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task19:
+    name: 魔百和
+    calculate: "str((a_d['task13']+a_d['task16'])/2)+'%/'+str((a_d['task14']+a_d['task17'])/2)+'%/'+str((a_d['task15']+a_d['task18'])/2)+'%'" #计算值
+    nameposition: A4
+    dataposition: C4
+
+ - task20:
+    sheet: zbx主机性能汇总
+    name: GSLB
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task21:
+    sheet: zbx主机性能汇总
+    name: GSLB
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task22:
+    sheet: zbx主机性能汇总
+    name: GSLB
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task23:
+    name: GSLB
+    calculate: "str(a_d['task20'])+'%/'+str(a_d['task21'])+'%/'+str(a_d['task22'])+'%'" #计算值
+    nameposition: A5
+    dataposition: C5
+
+ - task24:
+    sheet: zbx主机性能汇总
+    name: 广告平台
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task25:
+    sheet: zbx主机性能汇总
+    name: 广告平台
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task26:
+    sheet: zbx主机性能汇总
+    name: 广告平台
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task27:
+    name: 广告平台
+    calculate: "str(a_d['task24'])+'%/'+str(a_d['task25'])+'%/'+str(a_d['task26'])+'%'" #计算值
+    nameposition: A6
+    dataposition: C6
+
+ - task28:
+    sheet: zbx主机性能汇总
+    name: 用户中心
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task29:
+    sheet: zbx主机性能汇总
+    name: 用户中心
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task30:
+    sheet: zbx主机性能汇总
+    name: 用户中心
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task31:
+    name: 用户中心
+    calculate: "str(a_d['task28'])+'%/'+str(a_d['task29'])+'%/'+str(a_d['task30'])+'%'" #计算值
+    nameposition: A7
+    dataposition: C7
+
+ - task32:
+    sheet: zbx主机性能汇总
+    name: 媒资平台
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task33:
+    sheet: zbx主机性能汇总
+    name: 媒资平台
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task34:
+    sheet: zbx主机性能汇总
+    name: 媒资平台
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task35:
+    name: 媒资系统
+    calculate: "str(a_d['task32'])+'%/'+str(a_d['task33'])+'%/'+str(a_d['task34'])+'%'" #计算值
+    nameposition: A8
+    dataposition: C8
+
+ - task36:
+    sheet: zbx主机性能汇总
+    name: 手机营销平台
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task37:
+    sheet: zbx主机性能汇总
+    name: 手机营销平台
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task38:
+    sheet: zbx主机性能汇总
+    name: 手机营销平台
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task39:
+    name: 短信营销平台
+    calculate: "str(a_d['task36'])+'%/'+str(a_d['task37'])+'%/'+str(a_d['task38'])+'%'" #计算值
+    nameposition: A9
+    dataposition: C9
+
+ - task40:
+    sheet: zbx主机性能汇总
+    name: 大数据平台-陈鹏
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task41:
+    sheet: zbx主机性能汇总
+    name: 大数据平台-陈鹏
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task42:
+    sheet: zbx主机性能汇总
+    name: 大数据平台-陈鹏
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task43:
+    name: 经营分析平台\n（大数据）
+    calculate: "str(a_d['task40'])+'%/'+str(a_d['task41'])+'%/'+str(a_d['task42'])+'%'" #计算值
+    nameposition: A10
+    dataposition: C10
+
+ - task44:
+    sheet: zbx主机性能汇总
+    name: 营账系统(新分账)
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task45:
+    sheet: zbx主机性能汇总
+    name: 营账系统(新分账)
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task46:
+    sheet: zbx主机性能汇总
+    name: 营账系统(新分账)
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task47:
+    name: 营帐平台
+    calculate: "str(a_d['task44'])+'%/'+str(a_d['task45'])+'%/'+str(a_d['task46'])+'%'" #计算值
+    nameposition: A11
+    dataposition: C11
+
+ - task48:
+    sheet: zbx主机性能汇总
+    name: 二线客服
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task49:
+    sheet: zbx主机性能汇总
+    name: 二线客服
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task50:
+    sheet: zbx主机性能汇总
+    name: 二线客服
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task51:
+    name: 二线客服
+    calculate: "str(a_d['task48'])+'%/'+str(a_d['task49'])+'%/'+str(a_d['task50'])+'%'" #计算值
+    nameposition: A12
+    dataposition: C12
+
+ - task52:
+    sheet: zbx主机性能汇总
+    name: 能力开放平台
+    source: C #源表中的位置
+    deep: 200 #默认300深度
+
+ - task53:
+    sheet: zbx主机性能汇总
+    name: 能力开放平台
+    source: E #源表中的位置
+    deep: 200 #默认300深度
+
+ - task54:
+    sheet: zbx主机性能汇总
+    name: 能力开放平台
+    source: F #源表中的位置
+    deep: 200 #默认300深度
+
+ - task55:
+    name: 能力开放平台
+    calculate: "str(a_d['task52'])+'%/'+str(a_d['task53'])+'%/'+str(a_d['task54'])+'%'" #计算值
+    nameposition: A13
+    dataposition: C13

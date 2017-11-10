@@ -1,0 +1,94 @@
+name: zbx_NAS.*
+content:
+ - task1:
+    sheet: 各系统NAS信息
+    name: 咪咕视频
+    source: D #源表中的位置
+    nameposition: A1 #写入的表命名位置
+    dataposition: B1 #写入表中的数据位置
+    deep: 200 #默认300深度
+    decimal: 0 #默认精确到一位
+ - task2:
+    sheet: 各系统NAS信息
+    name: 咪咕直播
+    source: D
+    nameposition: A3
+    dataposition: B3
+    deep: 200
+ - task3:
+    sheet: 各系统NAS信息
+    name: 咪咕影院
+    source: D
+    nameposition: A2
+    dataposition: B2
+ - task4:
+    sheet: 各系统NAS信息
+    name: OTT点播
+    source: D
+ - task5:
+    sheet: 各系统NAS信息
+    name: OTT录制
+    source: D
+ - task6:
+    name: 魔百和
+    calculate: "u'录制NAS'+str(a_d['task5'])+'\\n'+u'点播NAS'+str(a_d['task4'])+'%'" #计算值
+    nameposition: A4
+    dataposition: B4
+ - task7:
+    sheet: 各系统NAS信息
+    name: GSBL
+    source: D
+    nameposition: A5
+    dataposition: B5
+    deep: 200
+    decimal: 0
+ - task8:
+    sheet: 各系统NAS信息
+    name: 广告平台
+    source: D
+    nameposition: A6
+    dataposition: B6
+ - task9:
+    sheet: 各系统NAS信息
+    name: 用户中心
+    source: D
+    nameposition: A7
+    dataposition: B7
+ - task10:
+    sheet: 各系统NAS信息
+    name: 媒资系统
+    source: D
+    nameposition: A8
+    dataposition: B8
+ - task11:
+    sheet: 各系统NAS信息
+    name: 短信营销
+    rename: 短信营销平台 #重命名
+    source: D
+    nameposition: A9
+    dataposition: B9
+ - task12:
+    sheet: 各系统NAS信息
+    name: 经营大数据平台\n(大数据)
+    source: D
+    rename:
+    nameposition: A10
+    dataposition: B10
+ - task13:
+    sheet: 各系统NAS信息
+    name: 营帐平台
+    source: D
+    nameposition: A11
+    dataposition: B11
+ - task14:
+    sheet: 各系统NAS信息
+    name: 二线客服
+    source: D
+    nameposition: A12
+    dataposition: B12
+ - task15:
+    sheet: 各系统NAS信息
+    name: 能力开放平台
+    source: D
+    nameposition: A13
+    dataposition: B13
